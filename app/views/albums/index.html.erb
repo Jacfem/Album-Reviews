@@ -1,9 +1,18 @@
-All Albums
-<ul>
-  <% @albums.each do |album| %>
-    <li>
-      <h2><%= link_to album.title, album_path(album) %></h2>
-      <h3><%= album.artist %></h3>
-    </li>
+<h1 class="current-category"><%= params[:category] %></h1>
+
+<% if @albums.count == 0 %>
+  <% if user_signed_in? %>
+    <h2>No albums of that category exist here yet! Why don't you <%=link_to "add one?", new_album_path %></h2>
+  <% else %>
+    <h2>No albums of that category exist here yet. <%=link_to "Sign up ", new_user_registration_path %> or <%= link_to "log in", new_user_session_path %> to add one!</h2>
   <% end %>
-</ul>
+<% else %>
+  <ul>
+    <% @albums.each do |album| %>
+      <li>
+        <h2><%= link_to album.title, album_path(album) %></h2>
+        <h3><%= album.artist %></h3>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
