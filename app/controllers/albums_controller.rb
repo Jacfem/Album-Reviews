@@ -10,10 +10,12 @@ before_action :find_album, only: [:show, :edit, :update, :destroy]
 
   def new
     @album = current_user.albums.build
+    @categories = Category.all.map{|c| [c.name, c.id]}
   end
 
   def create
     @album = current_user.albums.build(album_params)
+    @album.category_id = params[:category_id]
     if @album.save
       redirect_to root_path
     else
@@ -40,7 +42,7 @@ before_action :find_album, only: [:show, :edit, :update, :destroy]
   private
 
   def album_params
-    params.require(:album).permit(:title, :artist, :description)
+    params.require(:album).permit(:title, :artist, :description, :category_id)
   end
 
   def find_album
