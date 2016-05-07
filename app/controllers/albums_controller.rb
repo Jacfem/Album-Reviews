@@ -2,7 +2,12 @@ class AlbumsController < ApplicationController
 before_action :find_album, only: [:show, :edit, :update, :destroy]
 
   def index
-    @albums = Album.all.order("created_at DESC")
+    if params[:category].blank?
+      @albums = Album.all.order("created_at DESC")
+    else
+      @category_id = Category.find_by(name: params[:category]).id
+      @albums = Album.where(:category_id => @category_id).order("created_at DESC")
+    end
   end
 
   def show
@@ -24,9 +29,11 @@ before_action :find_album, only: [:show, :edit, :update, :destroy]
   end
 
   def edit
+    @categories = Category.all.map{|c| [c.name, c.id]}
   end
 
   def update
+    @album.category_id = params[:category_id]
     if @album.update(album_params)
       redirect_to album_path(@album)
     else
