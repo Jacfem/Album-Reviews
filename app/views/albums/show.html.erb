@@ -29,3 +29,13 @@
     <%= link_to "Delete Album", album_path(@album), method: :delete, data: {confirm: "Are you sure?"} %><br>
   <% end %>
 <% end %>
+
+<script>
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
