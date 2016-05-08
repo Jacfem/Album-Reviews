@@ -49,7 +49,7 @@ before_action :find_album, only: [:show, :edit, :update, :destroy]
   private
 
   def album_params
-    params.require(:album).permit(:title, :artist, :description, :category_id)
+    params.require(:album).permit(:title, :artist, :description, :category_id, :album_image)
   end
 
   def find_album

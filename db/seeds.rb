@@ -9,3 +9,5 @@ Category.create!(name: "Jazz")
 Category.create!(name: "Folk/Country")
 Category.create!(name: "Electronic")
 Category.create!(name: "Rock")
+
+# Album.create!(title: , artist: , description: , category_id: , album_image: )
