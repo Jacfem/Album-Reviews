@@ -14,7 +14,11 @@
 
 <div class="row">
   <div class="col-md-4">
-    <!-- Where the reviews/ratings will go -->
+
+    <%= render @album.reviews %>
+    <div>
+      <%= link_to "Add a Review", new_album_review_path(@album) %>
+    </div>
   </div>
 </div>
 

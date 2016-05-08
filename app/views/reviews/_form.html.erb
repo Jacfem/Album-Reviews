@@ -1,0 +1,5 @@
+<%= simple_form_for([@album, @album.reviews.build]) do |f| %>
+  <%= f.input :rating, label: "Rating" %>
+  <%= f.input :comment, label: "Review" %>
+  <%= f.button :submit %>
+<% end %>
