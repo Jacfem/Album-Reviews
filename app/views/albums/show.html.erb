@@ -1,7 +1,22 @@
-<h2><%= @album.title %></h2>
-<h3><%= @album.artist %></h3>
-<p><%= @album.category.name %></p>
-<p><%= @album.description %></p>
+
+<div class="row">
+  <div class="col-md-4">
+    <%= image_tag @album.album_image.url(:album_show), class: "album-show" %>
+  </div>
+
+  <div class="col-md-8">
+    <h2><%= @album.title %></h2>
+    <h3><%= @album.artist %></h3>
+    <p><%= @album.category.name %></p>
+    <p><%= @album.description %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <!-- Where the reviews/ratings will go -->
+  </div>
+</div>
 
 <%= link_to "All Albums", root_path %><br>
 <% if user_signed_in? %>

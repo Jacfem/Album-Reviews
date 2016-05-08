@@ -1,7 +1,8 @@
 <h1>Update Album</h1>
 
 <%= simple_form_for @album, :html => { :multipart => true } do |f| %>
-  <%= f.select(:category_id, @categories %>
+  <%= f.select :category_id, @categories %>
+  <%= f.file_field :album_image %>
   <%= f.input :title, label: "Album Name" %>
   <%= f.input :artist, label: "Artist" %>
   <%= f.input :description, label: "Description" %>

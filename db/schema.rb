@@ -11,16 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160507213557) do
+ActiveRecord::Schema.define(version: 20160507223627) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "title"
     t.string   "artist"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "user_id"
     t.integer  "category_id"
+    t.string   "album_image_file_name"
+    t.string   "album_image_content_type"
+    t.integer  "album_image_file_size"
+    t.datetime "album_image_updated_at"
   end
 
   create_table "categories", force: :cascade do |t|
