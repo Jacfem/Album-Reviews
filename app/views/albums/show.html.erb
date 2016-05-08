@@ -8,6 +8,9 @@
     <h2><%= @album.title %></h2>
     <h3><%= @album.artist %></h3>
     <p><%= @album.category.name %></p>
+    <h3>Average Rating</h3>
+    <div class="average-review-rating" data-score="<%= @average_review %>"></div>
+    <span>Based on <%= @album.reviews.count %> reviews</span>
     <p><%= @album.description %></p>
   </div>
 </div>
@@ -32,6 +35,16 @@
 
 <script>
   $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
+
+<script>
+  $('.average-review-rating').raty({
     readOnly: true,
     score: function() {
       return $(this).attr('data-score');
