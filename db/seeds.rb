@@ -7,15 +7,3 @@ Category.create!(name: "Pop")
 Category.create!(name: "Jazz")
 Category.create!(name: "Folk/Country")
 Category.create!(name: "Electronic")
-
-Album.create!(title: "Frank", artist: "Amy Winehouse", description: "Frank is the debut studio album by English singer and songwriter Amy Winehouse, released on 20 October 2003 by Island Records.", category_id: 7, album_image: "https://upload.wikimedia.org/wikipedia/en/e/e5/Amy_Winehouse_-_Frank.png")
-Album.create!(title: "Many Moons", artist: "Martin Courtney", description: "Many Moons is the debut solo album by Martin Courtney, the frontman of the American indie rock band Real Estate, released on October 30, 2015 on Domino Records.", category_id: 6, album_image: "http://www.dominorecordco.us/images/artists/martin_courtney/originals/Manymoons_courtney.jpg")
-Album.create!(title: "Physical Graffiti", artist: "Led Zeppelin", description: "Physical Graffiti is the sixth studio album by the English rock band Led Zeppelin, released as a double album on 24 February 1975.", category_id: 1, album_image: "https://cdn.pastemagazine.com/www/articles/2015/02/25/081227957940.jpeg")
-Album.create!(title: "Hurry Up, We're Dreaming", artist: "M83", description: "Hurry Up, We're Dreaming is the sixth studio album by French electronic band M83. The double album was released on 18 October 2011 by Naïve Records in France and Mute Records in the United States. ", category_id: 9, album_image: "http://ecx.images-amazon.com/images/I/51ksz96s7TL.jpg")
-Album.create!(title: "The Midnight Organ Fight", artist: "Frightened Rabbit", description: "The Midnight Organ Fight is the second studio album by Scottish indie rock band Frightened Rabbit. Recorded during 2007 between studios at Bridgeport, Connecticut and Glasgow, Scotland, the album was released on 15 April 2008 through independent label Fat Cat Records.", category_id: 1, album_image: "https://upload.wikimedia.org/wikipedia/en/a/a7/MidnightOrganFightCover.jpg")
-Album.create!(title: "Moment of Truth", artist: "Gang Starr", description: "Moment of Truth is the fifth album by hip hop duo Gang Starr.", category_id: 3, album_image: "http://s3.amazonaws.com/rapgenius/1361526754_Gang-Starr-Moment-Of-Truth.jpg")
-Album.create!(title: "The Wilderness", artist: "Explosions in the Sky", description: "The Wilderness is the seventh studio album by American post-rock band Explosions in the Sky, released on April 1, 2016.", category_id: 5, album_image: "http://cdn2.pitchfork.com/albums/23011/a4be7edc.jpg")
-Album.create!(title: "Teens of Style", artist: "Car Seat Headrest", description: "Teens of Style is the debut album recorded for Matador Records by American indie rock band Car Seat Headrest, released on 30 October 2015. ", category_id: 1, album_image: "http://cdn2.pitchfork.com/albums/22412/ef35505e.jpg")
-
-
-# Review.create!(rating: , comment: , album_id: )
